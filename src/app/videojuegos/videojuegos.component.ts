@@ -1,20 +1,33 @@
 import { Component } from '@angular/core';
 
 @Component({
+    // tslint:disable-next-line:component-selector
     selector: 'videojuegos',
     templateUrl: './videojuegos.component.html'
 })
-export class VideojuegosComponent{
-    public nombre = 'Videojuegos 2018';
-    public mejor_juego = 'Monster Hunter World';
-    public mejor_juego_retro = 'Super Mario Bros 3';
-    public mostrar_retro = true;
-    public color = "yellow";
+export class VideojuegosComponent {
+    public nombre: string;
+    public mejor_juego: string;
+    public mejor_juego_retro: string;
+    public mostrar_retro: boolean;
+    public color: string;
+    public year: number;
+    public videojuegos: Array<string>;
 
-    public videojuegos = [
-        'Los Sims 4',
-        'The Witcher 3',
-        'Call of Duty WW2',
-        'Battlefield 1'
-    ]
+    constructor() {
+        this.nombre = 'Videojuegos 2018';
+        this.mejor_juego = 'Monster Hunter World';
+        this.mejor_juego_retro = 'Super Mario Bros';
+        this.mostrar_retro = true;
+        this.color = 'yellow';
+        this.year = 2018;
+        this.videojuegos = [
+            'Los Sims 4',
+            'The Witcher 3',
+            'Call of Duty WW2',
+            'Battlefield 1',
+            'Monster Hunter World',
+            'Player Unknows Battlegrounds'
+        ];
+    }
 }
